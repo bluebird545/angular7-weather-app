@@ -1,0 +1,72 @@
+<header class="main-nav__container" [ngClass]="{'dark': globals.darkModeActive}">
+    <nav class="main-nav">
+        <div class="main-nav__left">
+            <svg [ngClass]="{'active': showMenu, 'dark': globals.darkModeActive}" (click)="toggleMenu()" id="Menu_Burger_Icon" class="hamburger__icon hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path
+                class="line top"
+                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                <path
+                class="line middle"
+                d="m 30,50 h 40" />
+                <path
+                class="line bottom"
+                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+            <!-- <svg class="logo__icon" viewBox="150.3 22.2 213.7 42.8">
+                <path fill="#00ff9b" d="M150.3 65V22.2L193 65z" data-name="Path 1"/>
+                <path fill="#003eff" d="M193.1 65h-42.8L193 22.2z" data-name="Path 2"/>
+                <text class="logo__text" fill="#432c85" font-family="SegoeUI-Semibold,Segoe UI" font-size="30" font-weight="600"
+                letter-spacing=".1em" transform="translate(237 56)">
+                <tspan x="0" y="0">HiWeather</tspan>
+                </text>
+            </svg> -->
+        </div>
+        <div class="main-nav__center">
+            <h2>HiWEATHER</h2>
+        </div>
+
+        <div class="main-nav__right">
+            <div class="mode-toggle__container">
+                <span>Light </span>
+                <span class="toggle-button">
+                    <input (change)="modeToggleSwitch($event)" type="checkbox" name="checkbox1" id="toggle-button-checkbox" />
+                    <label for="toggle-button-checkbox" class="toggle-button-label-left"></label>
+                    <label for="toggle-button-checkbox" class="toggle-button-label"></label>
+                </span>
+                <span>Dark</span>
+            </div>
+            <!-- <span *ngIf="!currentUser"><a routerLink="login" routerLinkActive="active-link" class="btn ylw-btn">Login</a></span> -->
+            <span *ngIf="currentUser"><a routerLinkActive="active-link" class="btn ylw-btn" (click)="logout()">Login</a></span>
+        </div>
+    </nav>
+</header>
+
+<!-- slide menu -->
+<aside class="slide-menu__container" [ngClass]="{'active': showMenu}" appClickOutside (click)="ClickedOut($event)">
+    <nav class="slide-menu" [ngClass]="{'active': showMenu}" >
+        <section class="menu-header">
+            <h2 class="greeting-text">Welcome back!</h2>
+            <div class="account-details">
+                <span class="name__text">[NAME]</span>
+                <span class="email__text">[EMAIL]</span>
+            </div>
+
+        </section>
+        <section class="menu-body">
+            <ul>
+                <li>
+                    <a routerLink="dashboard" routerLinkActive="active-link" (click)="toggleMenu()">Home</a>
+                </li>
+                <!-- <li>
+                    <a routerLink="login" routerLinkActive="active-link">Login</a>
+                </li> -->
+                <!-- <li>
+                    <a routerLink="register" routerLinkActive="active-link">Register</a>
+                </li> -->
+            </ul>
+        </section>
+        <section class="menu-footer">
+
+        </section>
+    </nav>
+</aside>

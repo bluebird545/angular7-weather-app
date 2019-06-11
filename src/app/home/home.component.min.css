@@ -1,0 +1,1 @@
+.main__container{display:block;justify-content:center;background:linear-gradient(#FC7DB8, #495CFC);overflow:auto;transition:background 500ms;animation:1s ease-in-out 0ms 1 fadein}.main__container.dark{background:linear-gradient(to bottom, #711B86, #00057A);color:white}

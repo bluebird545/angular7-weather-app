@@ -1,0 +1,82 @@
+<div class="details-page__wrapper" [ngClass]="{'dark': globals.darkModeActive}">
+    <!-- <svg class="background-gradient__circle" [ngClass]="{'dark': globals.darkModeActive}" viewBox="4572 73 1328 1328">
+        <defs>
+            <linearGradient id="ddd" x2="0" y2="1" gradientUnits="objectBoundingBox">
+                <stop offset="0" stop-color="#ff8b8b"/>
+                <stop offset="1" stop-color="#6676ff"/>
+            </linearGradient>
+        </defs>
+        <circle cx="664" cy="664" r="664" fill="url(#ddd)" transform="translate(4572 73)"/>
+    </svg> -->
+
+  <!-- <svg class="back__button" routerLink="" viewBox="4085 152 98.5 126">
+    <defs>
+      <style>.a {
+        fill: #2b244d;
+      }
+      .b {
+        fill: rgba(0, 0, 0, 0);
+      }
+      .b, .c {
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+      .c {
+        fill: none;
+      }
+      .d {
+        fill: #fff;
+        font-size: 15px;
+        font-family: SegoeUI, Segoe UI;
+        letter-spacing: 0.4em;
+      }</style>
+    </defs>
+    <g transform="translate(3980)">
+      <circle class="a" cx="39" cy="39" r="39" transform="translate(105 152)"/>
+      <line class="b" x1="80" transform="translate(123.5 190.5)"/>
+      <line class="b" y1="26" x2="26" transform="translate(123.5 164.5)"/>
+      <line class="c" x1="26" y1="27" transform="translate(123.5 190.5)"/>
+      <text class="d" transform="translate(117 274)">
+        <tspan x="0" y="0">BACK</tspan>
+      </text>
+    </g>
+  </svg> -->
+
+    <section class="main-weather__card" [ngClass]="{'dark': globals.darkModeActive}">
+        <div class="card-header__container" > <!-- [ngSwitch]="true" -->
+            <div class="header-content__wrapper">
+                <div class="city-name__container">
+                    <span class="city-name__text">{{city}}</span>
+                </div>
+                <div class="temp-state__container">
+                    <p class="temperature__text">{{forecast[0].highTemperature | fahrenheit}}°<span>F</span></p>
+                </div>
+                <div class="hum-wind__container">
+                    <div class="hum__container">
+                        <span class="hum__text">humidity</span>
+                        <span class="hum-value__text">{{forecast[0].humidity}}%</span>
+                    </div>
+
+                    <div class="hum-wind__separator">&nbsp;</div>
+
+                    <div class="wind__container">
+                        <span class="wind__text">wind</span>
+                        <span class="wind-value__text">{{forecast[0].windSpeed}}K/M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-content__wrapper">
+            <section class="forecast__container">
+                <div class="day-weather__container" *ngFor="let weather of forecast; let i = index;">
+                    <div class="day-weather" *ngIf="i<5">
+                        <p class="day-name__text" [ngClass]="{'dark': globals.darkModeActive}">{{weather.weekday | slice:0:3 }}</p>
+                        <img class="day-icon forecast-condition__icon" src="{{weather.iconLink}}" alt="">
+                        <p class="day-temp__text" [ngClass]="{'dark': globals.darkModeActive}">{{weather.highTemperature | fahrenheit}}°F</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,34 @@
+.main__container {
+    display: block;
+    justify-content: center;
+    background: linear-gradient(#FC7DB8, #495CFC);
+    overflow: auto;
+    transition: background 500ms;
+    animation: 1s ease-in-out 0ms 1 fadein;
+    &.dark {
+        background: linear-gradient(to bottom, #711B86, #00057A);
+        color: white;
+    }
+
+
+    // align-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(auto-fill, 1fr);
+    // align-items: center;
+    // justify-items: center;
+    // height: 100%;
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    // grid-template-rows: 100px;
+
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+    // flex: 1 1 160px;
+
+    // app-weathercard {
+    //     display: grid;
+    // }
+}

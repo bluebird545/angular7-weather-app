@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	border: 0;
+	font-size: 100%;
+	line-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+html,body {
+	height: 100%
+}
+html {
+    // font-size: calc(0.8em + 1vw);
+	// overflow: visible;
+}
+body {
+    padding: 0; margin: 0;
+    font-family: sans-serif;
+    // color: $font-color;
+	font-weight: 500;
+
+	// min-height: 100vh;
+	color: #57585c;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+a {
+    text-decoration: none;
+}
+.login-form,
+.register-form {
+    background-color: #ffffff;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 1fr 1fr;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 19rem;
+    height: 30rem;
+    justify-items: center;
+    border-radius: 1.75rem;
+    animation: 1.25s ease-in-out 0ms 1 fadein;
+    color: #443282;
+}
+label,
+input,
+button {
+    margin: auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    margin: 0.50rem 0;
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    animation-duration: 2s;
+        &::placeholder {
+            color: #39437a;
+            font-size: 0.9rem;
+        }
+        &:focus {
+            box-shadow: 0 0 20px rgba(#4fffa1, 1);
+        }
+        &.is-invalid {
+            box-shadow: 0 0 20px rgba(red, 0.60);
+        }
+}
+button {
+    background: linear-gradient(#4fffa1, #4ff0ff);
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    animation-duration: 2s;
+    &:hover {
+        background: linear-gradient(to right, #e21649, #ffb600);
+    }
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.invalid-feedback {
+    font-size: 0.7rem;
+    color: red;
+}
+.btn {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.ylw-btn {
+    color: white;
+    background-color: black;
+    &:hover {
+        color: invert(white, 0.5);
+        background-color: pink
+    }
+}
+.content {
+	width: 100%;
+	height: 100%;
+	// position: relative;
+	display: block;
+	overflow: auto;
+}
+.content__inner {
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	// height: 100vh;
+	// position: relative;
+	// text-align: center;
+	// display: flex;
+	// flex-wrap: wrap;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+}
