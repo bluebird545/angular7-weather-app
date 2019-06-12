@@ -20,8 +20,8 @@ export class WeatherService {
     private appCode: string;
 
     constructor(private http: HttpClient) {
-        this.appId = /* appId */;
-        this.appCode = /* appCode */;
+        this.appId = "/* appId */";
+        this.appCode = "/* appCode */";
 
     }
     getWeatherData() {
