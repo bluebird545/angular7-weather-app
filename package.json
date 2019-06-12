@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run serve-api\" \"npm run serve\" \"ng build --watch\"",
+    "start": "npm run serve",
     "serve": "ng serve",
     "build": "ng build",
     "serve-api": "node server/server",

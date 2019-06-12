@@ -1098,7 +1098,7 @@ var AuthService = /** @class */ (function () {
 /*!***********************************!*\
   !*** ./src/app/services/index.ts ***!
   \***********************************/
-/*! exports provided: UserService, AlertService, AuthService */
+/*! exports provided: AlertService, AuthService, UserService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1579,8 +1579,8 @@ __webpack_require__.r(__webpack_exports__);
 var WeatherService = /** @class */ (function () {
     function WeatherService(http) {
         this.http = http;
-        this.appId = "5bXej4QlOKY9fgACXN6t";
-        this.appCode = "l3T_q3bLLscWpn1oGcXuwA";
+        this.appId = "/* appId */";
+        this.appCode = "/* appCode */";
     }
     WeatherService.prototype.getWeatherData = function () {
         return _weather_data__WEBPACK_IMPORTED_MODULE_4__["WEATHER_DATA"];
