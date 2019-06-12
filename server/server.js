@@ -81,6 +81,6 @@ require('./routes')(app);
 //     return next(err);
 // });
 
-app.listen(port, (err) => {
-    console.log('Server listening on ', port);
+app.listen(process.env.PORT || port, () => {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
